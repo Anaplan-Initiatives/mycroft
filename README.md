@@ -56,13 +56,14 @@ Fork this repository and produce one or more example use case and and design doc
 A demonstration of the main idea of the solutions must show:
 
 1) A business user's experience in creating and setting up an automation job. The user must be able to choose what will trigger the task, choose at least two operations to perform and choose a way to produce some sort of output from the automation.
-2) A business user's experience for modifying an automation job. The user must be able to define an intermediate processing task that uses something produced by a previous task.
-3) A developer's expierence for adding a new trigger, processing task or output task.
-4) The business user's experience for swapping out an existing trigger, processing task or output task with the new one added in step 3 above.
+2) A business user's experience for viewing the results of an automation job.
+3) A business user's experience for modifying an automation job. The user must be able to define an intermediate processing task that uses something produced by a previous task.
+4) A developer's expierence for adding a new trigger, processing task or output task.
+5) The business user's experience for swapping out an existing trigger, processing task or output task with the new one added in step 4 above.
 
 ### Prereqisites
 
-You may use python or javascript and open source libraries instalable via pip or npm.
+You may use python and/or javascript and open source libraries instalable via pip or npm.
 You provide your own execution environment or run on Amazon Lambda or Google Cloud Functions
 All source code needed to demonstrate your example should be present in your repository along with documentation about how to setup and use it.
 
