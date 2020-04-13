@@ -51,12 +51,20 @@ Fork this repository and produce one or more example use case and and design doc
 2) Your "SDK" for adding new triggers/operations and outputs. This should include documemtation and samples.
 3) A limited working example demostrating aspects of the solution
 
-Pick your own example/examples to demonstrate.
+### Use case demonstration
 
-You may use any open source programming lanuguage and open source libraries
+A demonstration of the main idea of the solutions must show:
+
+1) A business user's experience in creating and setting up an automation job. The user must be able to choose what will trigger the task, choose at least two operations to perform and choose a way to produce some sort of output from the automation.
+2) A business user's experience for modifying an automation job. The user must be able to define an intermediate processing task that uses something produced by a previous task.
+3) A developer's expierence for adding a new trigger, processing task or output task.
+4) The business user's experience for swapping out an existing trigger, processing task or output task with the new one added in step 3 above.
+
+### Prereqisites
+
+You may use python or javascript and open source libraries instalable via pip or npm.
 You provide your own execution environment or run on Amazon Lambda or Google Cloud Functions
-All source code needed to demonstrate your example should be present in your repository
-
+All source code needed to demonstrate your example should be present in your repository along with documentation about how to setup and use it.
 
 ## Evaluation Criteria
 
