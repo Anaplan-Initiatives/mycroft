@@ -46,7 +46,8 @@ So far we have only considered the end consumer of the automation service. There
 
 ## Project and Deliverables
 
-Fork this repository and produce one or more example use case and and design documentation for
+Fork this repository and produce one or more example use case and and design documentation for:
+
 1) The language or UI that the end user uses to select/configure and compose an automation job
 2) Your "SDK" for adding new triggers/operations and outputs. This should include documemtation and samples.
 3) A limited working example demostrating aspects of the solution
@@ -63,6 +64,8 @@ A demonstration of the main idea of the solutions must show:
 
 ### Prereqisites
 
+Pick your own use cases as a subject for your project.
+
 You may use python and/or javascript and open source libraries instalable via pip or npm.
 You provide your own execution environment or run on Amazon Lambda or Google Cloud Functions
 All source code needed to demonstrate your example should be present in your repository along with documentation about how to setup and use it.
@@ -72,4 +75,5 @@ All source code needed to demonstrate your example should be present in your rep
 1) Ease of composition. How easy is it for non-technical users to compose multi-sequence tasks?
 2) Ease of authoring? How easy is it for developers to contribute new triggers/operation or output types?
 3) How broad is the range of configuration and composition options provided?
+4) How useful would this be to a real user? Your solution will be somewhat useful to a user if it allows the user to automate something that he/she currently does manually. It will be even more useful if it allows the users to do something that he/she couldn't do at all today.
  
