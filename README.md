@@ -48,31 +48,29 @@ So far we have only considered the end consumer of the automation service. There
 
 We will use a real business example to illustrate what Mycroft is all about.
 
-![Title](https://github.com/madendorff/collab/blob/master/images/mycroft_title.png)
+![Title](images/mycroft_title.png)
 
 Industry 4.0 started in manufacturing, the the principles of using data and business understanding to improve business processes and enable new styles of doing business is permeating into all industries.
 
-![Example](https://github.com/madendorff/collab/blob/master/images/mycoft%20example.png)
+![Example](images/mycoft%20example.png)
 
 This manufacturing example shows the high level AI and process automation work needed to solve a problem like this.
 
-![Tasks](https://github.com/madendorff/collab/blob/master/images/mycroft_pains.png)
+![Tasks](images/mycroft_pains.png)
 
 AI tends to steal the spotlight, but a lot of what it takes to put AI into practice involves human knowledge...not AI.
 
-![Encoding](https://github.com/madendorff/collab/blob/master/images/mycroft%20encoding.png)
+![Encoding](images/mycroft%20encoding.png)
 
 Traditional coding is one way to to capture human logic...
 
-![Coding](https://github.com/madendorff/collab/blob/master/images/mycroft%20coding.png)
+![Coding](images/mycroft%20coding.png)
 
 ... but there is lots of knowledge out there in lots of peoples heads, and it is constantly improving. It is not practical to describe it all using traditional coding approaches.
 
-![Mycroft concept](https://github.com/madendorff/collab/blob/master/images/mycoft%20concept.png)
+![Mycroft concept](images/mycoft%20concept.png)
 
 Project Mycroft is a design investigation task aimed at exploring alternative ways to encode human knowledge and use it to automate tasks.
-
-
 
 
 
