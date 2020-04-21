@@ -44,6 +44,38 @@ The main objective of this project is to explore how business users can choose f
 
 So far we have only considered the end consumer of the automation service. There is work required by others to setup available triggers, operations and output types and to describe their configuration requirements. The project also explores the how the ecosystem will be enabled, e.g. as a provider or a music service, how could you allow the end consumer to use your music service to play music.
 
+## Background
+
+We will use a real business example to illustrate what Mycroft is all about.
+
+![Title](https://github.com/madendorff/collab/blob/master/images/mycroft_title.png)
+
+Industry 4.0 started in manufacturing, the the principles of using data and business understanding to improve business processes and enable new styles of doing business is permeating into all industries.
+
+![Example](https://github.com/madendorff/collab/blob/master/images/mycoft%20example.png)
+
+This manufacturing example shows the high level AI and process automation work needed to solve a problem like this.
+
+![Tasks](https://github.com/madendorff/collab/blob/master/images/mycroft_pains.png)
+
+AI tends to steal the spotlight, but a lot of what it takes to put AI into practice involves human knowledge...not AI.
+
+![Encoding](https://github.com/madendorff/collab/blob/master/images/mycroft%20encoding.png)
+
+Traditional coding is one way to to capture human logic...
+
+![Coding](https://github.com/madendorff/collab/blob/master/images/mycroft%20coding.png)
+
+... but there is lots of knowledge out there in lots of peoples heads, and it is constantly improving. It is not practical to describe it all using traditional coding approaches.
+
+![Mycroft concept](https://github.com/madendorff/collab/blob/master/images/mycoft%20concept.png)
+
+Project Mycroft is a design investigation task aimed at exploring alternative ways to encode human knowledge and use it to automate tasks.
+
+
+
+
+
 ## Project and Deliverables
 
 Fork this repository and produce one or more example use case and and design documentation for:
