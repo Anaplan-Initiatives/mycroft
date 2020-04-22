@@ -96,7 +96,8 @@ A demonstration of the main idea of the solutions must show:
 
 Pick your own use cases as a subject for your project.
 
-You may use python and/or javascript and open source libraries instalable via pip or npm.
+The executable "workers" that carry out runtime automation tasks will be written as python classes. They must inherit from BaseWorker and you must implement the *execute()* method. See sample. The execute method may wrap an external service. The rest of the code can be python and/or javascript and open source libraries instalable via pip or npm.
+
 You provide your own execution environment or run on Amazon Lambda or Google Cloud Functions
 All source code needed to demonstrate your example should be present in your repository along with documentation about how to setup and use it.
 
