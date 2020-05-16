@@ -108,3 +108,49 @@ All source code needed to demonstrate your example should be present in your rep
 3) How broad is the range of configuration and composition options provided?
 4) How useful would this be to a real user? Your solution will be somewhat useful to a user if it allows the user to automate something that he/she currently does manually. It will be even more useful if it allows the users to do something that he/she couldn't do at all today.
  
+# Mycroft Base Classes
+
+The main Mycroft Base Class is BaseWorke. BaseWorker established the basic signature for any objects that perform work as part of task processing.
+
+The Incrementor class below shows how to use BaseWorker to build a simple worker. When executed this worker takes whatever it received as input and increments it by an pre-configured amount.
+
+'''
+class Incrementor(BaseWorker):
+
+    """
+    Simple worker. Increments a number by a value. Value is passed as a parameter called increment)
+    """
+
+    def __init__(self, name = None, increment = 1, **kwargs):
+
+        kwargs['increment'] = increment
+        super().__init__(name, **kwargs)
+
+    def execute(self, x):
+        """
+        Execute the worker. The execute method always takes a single argument representing the
+        input to the worker.
+        """
+
+        return (x + self.increment)
+ '''
+ 
+The Incrementor inherits methods for initializing parameters from BaseWorker. The only mandatory method for a worker is the execute() method. All workers take a single input and return a single output. Any other data or metadata that they need for execution should be established at the time of initialization of determined inside the execute() method.
+ 
+Mycroft also has a Pipeline Class that demonstrates one way of composing tasks using Mycoft workers. The example below shows how to compose a Pipeline task using two Incrementors.
+
+'''
+pipeline = mc.Pipeline(Incrementor('add_two',2),Incrementor('add_three',3))
+'''
+
+The sample above initiates a Pipeline object that will take the input to the pipeline and run two workers on it. The first worker adds 2 to the input the second worker adds 3.
+
+When executing the above pipeline on using 5 as the input it will return 5 +  + 3 = 10.
+
+'''
+result = pipeline.execute(5)
+print (result)
+>>> 10
+'''
+
+This basic example is not exactly a ground-breaking new way to compose an arithmetic problem, but it serves to demonstrate the idea of composing tasks. The act of composition is really simple. Assign parameters to workers and execute them in sequence. These workers are simple, but imagine that they did something more interesting like scape data off the web, merge and transform more complex data structures, run ML training or scoring tasks or interact with other services, reconfigure other workers or build and execute other pipelines. With a collection of ingenious workers, configurable using parameters and composable into a tasks, the sky is the limit in terms of the nature of tasks than can be composed.
