@@ -110,7 +110,7 @@ All source code needed to demonstrate your example should be present in your rep
  
 # Mycroft Base Classes
 
-The main Mycroft Base Class is BaseWorker. BaseWorker established the basic signature for any objects that perform work as part of task processing.
+The main Mycroft Base Class is BaseWorker. BaseWorker establishes the basic signature for any objects that perform work as part of task processing.
 
 The Incrementor class below shows how to use BaseWorker to build a simple worker. When executed this worker takes whatever it received as input and increments it by an pre-configured amount.
 
