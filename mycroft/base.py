@@ -9,7 +9,10 @@ class BaseWorker(object):
         name (str): The name of your worker
     """
 
-    def __init__(self, name,**kwargs ):
+    def __init__(self, name = None,**kwargs ):
+
+        if name is None:
+            name = self.__class__.__name__
 
         self.name = name
         self.set_params(**kwargs)
