@@ -27,7 +27,7 @@ class Incrementor(mc.BaseWorker):
 worker3 = Incrementor('add_two',2)   # custom worker object
 
 # create a text pipeline that uses a sequence of two incrementors. The first adds 2. The next adds 3.
-pipeline = mc.BasePipeline(worker3,Incrementor('add_three',3))
+pipeline = mc.Pipeline(worker3,Incrementor('add_three',3))
 
 
 def test_init():

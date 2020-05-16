@@ -50,7 +50,7 @@ class BaseWorker(object):
         return self
 
 
-class BasePipeline(object):
+class Pipeline(object):
     """
     Pipelines are one of the ways of composing multistage tasks. A pipeline is initialized
     using a sequence of workers.
