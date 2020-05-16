@@ -118,7 +118,7 @@ The Incrementor class below shows how to use BaseWorker to build a simple worker
 class Incrementor(BaseWorker):
 
     """
-    Simple worker. Increments a number by a value. Value is passed as a parameter called increment)
+    Simple worker. Increments a number by a value. Value is passed as a parameter called increment.
     """
 
     def __init__(self, name = None, increment = 1, **kwargs):
