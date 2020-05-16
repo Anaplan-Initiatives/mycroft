@@ -24,7 +24,11 @@ class Incrementor(mc.BaseWorker):
 
         return (x + self.increment)
 
-worker3 = Incrementor('add_two',2)
+worker3 = Incrementor('add_two',2)   # custom worker object
+
+# create a text pipeline that uses a sequence of two incrementors. The first adds 2. The next adds 3.
+pipeline = mc.BasePipeline(worker3,Incrementor('add_three',3))
+
 
 def test_init():
     assert(worker.__class__.__name__ == 'BaseWorker')
@@ -48,3 +52,6 @@ def test_execute():
 
 def test_Incrementor():
     assert (worker3.execute(1) == 3)
+
+def test_pipeline():
+    assert (pipeline.execute(5) == 10)

@@ -48,3 +48,40 @@ class BaseWorker(object):
             setattr(self, key, value)
 
         return self
+
+
+class BasePipeline(object):
+    """
+    Pipelines are one of the ways of composing multistage tasks. A pipeline is initialized
+    using a sequence of workers.
+
+    The sequence of workers are described using positional arguments.
+
+    """
+
+    def __init__(self, *args,**kwargs ):
+
+        self.workers = list(args)
+        self.set_params(**kwargs)
+
+    def execute(self, x = None):
+        """
+         Chain the workers by calling the execute method of each worker and passing the output
+         of the stage as the input to the next.
+        """
+
+        for w in self.workers:
+            x = w.execute(x)
+
+        return x
+
+    def get_param(self, param):
+        return getattr(self, param)
+
+    def set_params(self, **params):
+        for key,value in list(params.items()):
+
+            setattr(self, key, value)
+
+        return self
+
