@@ -49,6 +49,51 @@ class BaseWorker(object):
 
         return self
 
+class BaseDataObject (object):
+    """
+
+    Base class for describing data objects
+    """
+
+    def __init__ (self, name, *children, **kwargs):
+
+        if name is None:
+            name = self.__class__.__name__
+
+        self.name = name
+        self.parent = None
+        self.set_params(**kwargs)
+        self.children = {}
+        for i in children:
+            self[i.name] = i
+
+    def get_param(self, param):
+        return getattr(self, param)
+
+
+    def __getitem__(self,item):
+
+        return self.children[item]
+
+    def __setitem__(self, key, value):
+
+        self.children[key] = value
+        self.children[key].set_parent(self)
+        # override default name with key
+        if value.name == value.__class__.__name__:
+            value.name = key
+
+    def set_params(self, **params):
+        for key,value in list(params.items()):
+
+            setattr(self, key, value)
+
+        return self
+
+    def set_parent(self,parent):
+
+        self.parent = parent
+
 
 class Pipeline(object):
     """
